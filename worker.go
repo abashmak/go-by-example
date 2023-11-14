@@ -5,6 +5,9 @@ import (
 	"sync"
 )
 
+/*
+Worker routine to "decode" TCP packets
+*/
 func Worker(inChan <-chan []byte, outChan chan<- string, workerId int, wg *sync.WaitGroup) {
 	pktCount := 0
 

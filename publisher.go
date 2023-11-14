@@ -5,6 +5,10 @@ import (
 	"sync"
 )
 
+/*
+Publisher routine to to publish decoded data
+*/
+
 func Publisher(in <-chan string, wg *sync.WaitGroup) {
 	pktCount := 0
 

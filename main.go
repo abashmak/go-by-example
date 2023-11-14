@@ -15,8 +15,6 @@ const (
 
 /*
 Load-balancing TCP ingestion server
-To send sample TCP packets on the command line:
-for ((x=0; x<10; x++)); do echo -e "$x" | netcat localhost 8080 -c && sleep 1; done
 */
 func main() {
 	// Variable declaration without assignment, explicit type

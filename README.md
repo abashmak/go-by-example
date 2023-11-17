@@ -1,14 +1,16 @@
 # go-by-example
 
-A selective tour of Go by example, with emphasis on multi-threaded programming.
+A selective tour of Go by example, with emphasis on concurrent programming.
 
-Topics covered:
+Concepts covered:
 * Variable declaration/assignment
 * Range looping
 * Panic
 * Defer
-* Thread signaling (work group, channel)
+* Shared memory space signaling (work group, channel)
 * Go-routines
+  * https://dev.to/gophers/what-are-goroutines-and-how-are-they-scheduled-2nj3
+  * https://granulate.io/blog/deep-dive-into-golang-performance/
 
 ## Architecture
 This code implements the following simulated data pipeline:

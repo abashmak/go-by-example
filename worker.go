@@ -14,12 +14,12 @@ func Worker(inChan <-chan []byte, outChan chan<- string, workerId int, wg *sync.
 	// Decrement semaphore before exiting the Worker scope
 	defer wg.Done()
 
-	// Needs to be a function to utilize updated values in workerId and pktCount
+	// Needs to be a function to utilize up-to-date values of workerId and pktCount
 	defer func() {
 		fmt.Printf("Exiting packet worker #%d, after processing %d packets\n", workerId, pktCount)
 	}()
 
-	// This loop will exit when inChan is closed
+	// Receive on inChan while it's open
 	for packet := range inChan {
 		decoded := string(packet) // Simulate decoding/processing
 		fmt.Printf("Packet worker #%d: decoded packet: %s", workerId, decoded)

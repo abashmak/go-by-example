@@ -18,7 +18,7 @@ Load-balancing TCP ingestion server
 */
 func main() {
 	// Variable declaration without assignment, explicit type
-	// Semaphore counter, thread safe, mutex, atomic integer
+	// Semaphore counter, thread-safe, mutex, atomic integer
 	var wg sync.WaitGroup
 
 	// variable declaration with assignment, implicit type
@@ -32,7 +32,7 @@ func main() {
 		defer listener.Close()
 	}
 
-	// buffered channel, like a queue, (can be unbuffered - mmediately blocking)
+	// buffered channel, like a queue, (can be unbuffered - immediately blocking)
 	ingestChannel := make(chan []byte, 100)
 	defer close(ingestChannel)
 

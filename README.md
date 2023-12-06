@@ -9,8 +9,9 @@ Concepts covered:
 * Defer
 * Shared memory space signaling (work group, channel)
 * Go-routines
+  * https://go.dev/doc/faq#goroutines
   * https://dev.to/gophers/what-are-goroutines-and-how-are-they-scheduled-2nj3
-  * https://granulate.io/blog/deep-dive-into-golang-performance/
+  * https://granulate.io/blog/deep-dive-into-golang-performance (Threading Model section)
 
 ## Architecture
 This code implements the following simulated data pipeline:

@@ -49,7 +49,7 @@ func main() {
 	wg.Add(1)                         // Increment semaphore
 	go Publisher(publishChannel, &wg) // Spin off new Publisher thread
 
-	sigChannel := make(chan os.Signal, 1)
+	sigChannel := make(chan os.Signal)
 	signal.Notify(sigChannel, os.Interrupt)
 	go func() {
 		for range sigChannel {
